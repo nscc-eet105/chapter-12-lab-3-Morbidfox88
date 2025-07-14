@@ -13,7 +13,7 @@ response = requests.get("https://api.openweathermap.org/data/2.5/weather?zip=435
 if response:
     response_dict = response.json()
     print('The Current Weather for', response_dict['name'],':')
-    #print('Conditions:', response_dict['weather'] ['description'])
+    print('Conditions:', response_dict['weather'] [0] ['description'],)
     print('Temperature:', response_dict['main'] ['temp'], 'degrees')
     print('Feels Like:', response_dict['main'] ['feels_like'], 'degrees')
     print('Humidity:', response_dict['main'] ['humidity'],'%')
