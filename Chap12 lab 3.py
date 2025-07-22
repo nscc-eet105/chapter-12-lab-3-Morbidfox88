@@ -11,7 +11,7 @@ import requests
 zip_code = input('please enter the ZIP code: ').strip()
 
 
-response = requests.get("https://api.openweathermap.org/data/2.5/weather?zip={zip_code},us&units=imperial&appid=80e3bd3ae92a57f438be3823b5d9d234")
+response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?zip={zip_code},us&units=imperial&appid=80e3bd3ae92a57f438be3823b5d9d234")
 
 if response:
     response_dict = response.json()
